@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+/*******************
+variables
+*******************/
+/*******************
+basic styles
+*******************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.container {
+  width: 70%;
+  margin: 0 auto; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #fff; }
+
+a {
+  transition: 0.4s ease;
+  cursor: pointer;
+  text-decoration: none; }
+
+ul {
+  list-style-type: none; }
+
+/*******************
+mixins
+*******************/
+.logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 900; }
+  .logo:hover {
+    color: #b41aab; }
+  .logo span {
+    color: #b41aab;
+    font-style: italic;
+    text-shadow: 0 0 5px #fff; }
+
+.bars, header .topBar {
+  color: #9190a5; }
+  .bars a, header .topBar a {
+    color: #9190a5;
+    margin-left: 10px; }
+    .bars a:hover, header .topBar a:hover {
+      color: #b41aab; }
+
+.lista, header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row; }
+  .lista a, header nav ul a {
+    color: #fff;
+    margin-left: 50px; }
+    .lista a:hover, header nav ul a:hover {
+      color: #b41aab; }
+
+/*******************
+header
+*******************/
+header {
+  background-image: linear-gradient(to right, rgba(180, 26, 171, 0.7), rgba(12, 6, 46, 0.7)), url(img/header.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh; }
+  header .topBar {
+    text-align: right;
+    padding: 20px 0; }
+  header nav {
+    background: #081624;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 20px;
+    box-shadow: 0 0 10px #b41aab; }
+  header .usp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh; }
+    header .usp h1 {
+      font-size: 10rem; }
+    header .usp p {
+      color: #9190a5;
+      font-size: 1.5rem;
+      text-align: center; }
+    header .usp button {
+      padding: 15px 30px;
+      background: #fff;
+      color: #501755;
+      box-shadow: 10px 10px #b41aab;
+      border: none;
+      text-transform: uppercase;
+      font-size: .8rem;
+      font-style: italic;
+      margin-top: 30px;
+      transition: 0.4s ease; }
+      header .usp button:hover {
+        cursor: pointer;
+        box-shadow: 10px 10px #0c062e; }
+
+/*# sourceMappingURL=main.css.map */
