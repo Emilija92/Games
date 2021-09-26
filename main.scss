@@ -105,13 +105,24 @@ mixins
         }
     }
 }
-
+.links {
+    color: $white;
+    text-transform: uppercase;
+    font-style: italic;
+    &:hover {
+        color: $accents;
+    }
+    i {
+        color: $accents;
+    }
+}
 /*******************
 header
 *******************/
 header {
     background-image:linear-gradient(to right,rgba($accents,.7),rgba($darkBlue,.7)), url(img/header.jpg);
     @include bgImg(center,cover,100vh);
+    border-bottom: 3px solid $accents;
     .topBar {
         @extend .bars;
         text-align: right;
@@ -140,5 +151,154 @@ header {
         button {
             @include btn;
         }
+    }
+}
+/*******************
+reviews
+*******************/
+.reviews {
+    background: $darkBlue;
+    padding: $padding;
+    .container {
+        @include flex(space-between,center ,row );
+        div {
+            flex: 0 0 30%;
+            h4 {
+                span {
+                    color: $accents;
+                }
+            }
+            h2 {
+                font-size: 2rem;
+            }
+            p {
+                padding: 30px 0;
+            }
+        }
+    }
+}
+/*******************
+news
+*******************/
+.news {
+    background: linear-gradient(45deg,$pink,$violet);
+    padding: $padding;
+    .container {
+        @include flex(space-between,flex-start,row);
+        article {
+            flex: 0 0 70%;
+            h2 {
+                font-size: 3rem;
+                font-style: italic;
+                margin-bottom: 20px;
+            }
+            .post {
+                @include flex(space-between,center ,row );
+                margin-bottom: 30px;
+                .featuredImage {
+                    flex: 0 0 38%;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .text {
+                    flex: 0 0 58%;
+                    span {
+                        color: $accents;
+                    }
+                    h3 {
+                        font-size: 1.7rem;
+                    }
+                    p {
+                        color: $lightGray;
+                        padding: 10px 0;
+                    }
+                }
+            }
+        }
+        aside {
+            flex: 0 0 30%;
+            background: $pink;
+            .widget {
+                padding: 30px;
+                h3 {
+                    font-size: 2rem;
+                }
+                ul {
+                    li {
+                        line-height: 2;
+                        a {
+                            @extend .links;
+                        }
+                    }
+                }
+                div {
+                    background: $lightGray;
+                    padding: 20px;
+                    text-align: center;
+                    img {
+                        width: 100%;
+                    }
+                    h4 {
+                        color: $black;
+                    }
+                    h2 {
+                        font-size: 2rem;
+                        text-shadow: 0 0 5px $accents;
+                        color: $black;
+                    }
+                    button {
+                        @include btn;
+                    }
+                }
+            }
+        }
+    }
+}
+/*******************
+subscribe
+*******************/
+.subscribe {
+    padding: $padding;
+    text-align: center;
+    background: $lightGray;
+    h2 {
+        font-size: 3rem;
+        color: $darkBlue;
+    }
+    input[type="email"] {
+        padding: 15px;
+        width: 400px;
+        background: transparent;
+        border: none;
+        border-bottom: 3px solid $violet;
+        margin-right: 30px;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-style: italic;
+        outline: none;
+    }
+    input[type="submit"] {
+        @include btn;
+    }
+}
+/*******************
+footer
+*******************/
+footer {
+    background: $darkBlue;
+    padding: 40px 0;
+    text-align: center;
+    ul {
+        a {
+            color: $white;
+            &:hover {
+                color: $accents;
+            }
+        }
+    }
+    p {
+        @extend .bars;
+        margin-top: 20px;
     }
 }

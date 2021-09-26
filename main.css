@@ -42,12 +42,12 @@ mixins
     font-style: italic;
     text-shadow: 0 0 5px #fff; }
 
-.bars, header .topBar {
+.bars, header .topBar, footer p {
   color: #9190a5; }
-  .bars a, header .topBar a {
+  .bars a, header .topBar a, footer p a {
     color: #9190a5;
     margin-left: 10px; }
-    .bars a:hover, header .topBar a:hover {
+    .bars a:hover, header .topBar a:hover, footer p a:hover {
       color: #b41aab; }
 
 .lista, header nav ul {
@@ -62,6 +62,15 @@ mixins
     .lista a:hover, header nav ul a:hover {
       color: #b41aab; }
 
+.links, .news .container aside .widget ul li a {
+  color: #fff;
+  text-transform: uppercase;
+  font-style: italic; }
+  .links:hover, .news .container aside .widget ul li a:hover {
+    color: #b41aab; }
+  .links i, .news .container aside .widget ul li a i {
+    color: #b41aab; }
+
 /*******************
 header
 *******************/
@@ -69,7 +78,8 @@ header {
   background-image: linear-gradient(to right, rgba(180, 26, 171, 0.7), rgba(12, 6, 46, 0.7)), url(img/header.jpg);
   background-position: center;
   background-size: cover;
-  height: 100vh; }
+  height: 100vh;
+  border-bottom: 3px solid #b41aab; }
   header .topBar {
     text-align: right;
     padding: 20px 0; }
@@ -109,5 +119,150 @@ header {
       header .usp button:hover {
         cursor: pointer;
         box-shadow: 10px 10px #0c062e; }
+
+/*******************
+reviews
+*******************/
+.reviews {
+  background: #0c062e;
+  padding: 80px 0; }
+  .reviews .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row; }
+    .reviews .container div {
+      flex: 0 0 30%; }
+      .reviews .container div h4 span {
+        color: #b41aab; }
+      .reviews .container div h2 {
+        font-size: 2rem; }
+      .reviews .container div p {
+        padding: 30px 0; }
+
+/*******************
+news
+*******************/
+.news {
+  background: linear-gradient(45deg, #501755, #2d1854);
+  padding: 80px 0; }
+  .news .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row; }
+    .news .container article {
+      flex: 0 0 70%; }
+      .news .container article h2 {
+        font-size: 3rem;
+        font-style: italic;
+        margin-bottom: 20px; }
+      .news .container article .post {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        margin-bottom: 30px; }
+        .news .container article .post .featuredImage {
+          flex: 0 0 38%; }
+          .news .container article .post .featuredImage img {
+            width: 100%; }
+        .news .container article .post .text {
+          flex: 0 0 58%; }
+          .news .container article .post .text span {
+            color: #b41aab; }
+          .news .container article .post .text h3 {
+            font-size: 1.7rem; }
+          .news .container article .post .text p {
+            color: #9190a5;
+            padding: 10px 0; }
+    .news .container aside {
+      flex: 0 0 30%;
+      background: #501755; }
+      .news .container aside .widget {
+        padding: 30px; }
+        .news .container aside .widget h3 {
+          font-size: 2rem; }
+        .news .container aside .widget ul li {
+          line-height: 2; }
+        .news .container aside .widget div {
+          background: #9190a5;
+          padding: 20px;
+          text-align: center; }
+          .news .container aside .widget div img {
+            width: 100%; }
+          .news .container aside .widget div h4 {
+            color: #081624; }
+          .news .container aside .widget div h2 {
+            font-size: 2rem;
+            text-shadow: 0 0 5px #b41aab;
+            color: #081624; }
+          .news .container aside .widget div button {
+            padding: 15px 30px;
+            background: #fff;
+            color: #501755;
+            box-shadow: 10px 10px #b41aab;
+            border: none;
+            text-transform: uppercase;
+            font-size: .8rem;
+            font-style: italic;
+            margin-top: 30px;
+            transition: 0.4s ease; }
+            .news .container aside .widget div button:hover {
+              cursor: pointer;
+              box-shadow: 10px 10px #0c062e; }
+
+/*******************
+subscribe
+*******************/
+.subscribe {
+  padding: 80px 0;
+  text-align: center;
+  background: #9190a5; }
+  .subscribe h2 {
+    font-size: 3rem;
+    color: #0c062e; }
+  .subscribe input[type="email"] {
+    padding: 15px;
+    width: 400px;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid #2d1854;
+    margin-right: 30px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-style: italic;
+    outline: none; }
+  .subscribe input[type="submit"] {
+    padding: 15px 30px;
+    background: #fff;
+    color: #501755;
+    box-shadow: 10px 10px #b41aab;
+    border: none;
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-style: italic;
+    margin-top: 30px;
+    transition: 0.4s ease; }
+    .subscribe input[type="submit"]:hover {
+      cursor: pointer;
+      box-shadow: 10px 10px #0c062e; }
+
+/*******************
+footer
+*******************/
+footer {
+  background: #0c062e;
+  padding: 40px 0;
+  text-align: center; }
+  footer ul a {
+    color: #fff; }
+    footer ul a:hover {
+      color: #b41aab; }
+  footer p {
+    margin-top: 20px; }
 
 /*# sourceMappingURL=main.css.map */
