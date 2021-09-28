@@ -83,6 +83,10 @@ header {
   header .topBar {
     text-align: right;
     padding: 20px 0; }
+  header .fa-bars {
+    display: none; }
+  header .fa-times {
+    display: none; }
   header nav {
     background: #081624;
     display: flex;
@@ -264,5 +268,159 @@ footer {
       color: #b41aab; }
   footer p {
     margin-top: 20px; }
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%; }
+
+  header {
+    height: 90vh; }
+    header .topBar {
+      text-align: center; }
+    header nav {
+      background: rgba(8, 22, 36, 0.8);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 40px;
+      overflow: hidden;
+      margin-bottom: 20px; }
+      header nav ul {
+        display: none; }
+      header nav .fa-bars {
+        display: block;
+        color: #9190a5;
+        font-size: 2rem;
+        margin-top: 20px; }
+        header nav .fa-bars:hover {
+          color: #b41aab; }
+      header nav .fa-times {
+        display: none;
+        font-size: 2rem;
+        color: #9190a5;
+        position: absolute;
+        top: 100px;
+        right: 40px;
+        z-index: 999; }
+        header nav .fa-times:hover {
+          color: #b41aab; }
+    header nav .openNav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 0;
+      padding: 0; }
+      header nav .openNav ul {
+        display: block;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0; }
+      header nav .openNav .fa-times {
+        display: block; }
+    header nav .closeNav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-end;
+      flex-direction: column; }
+    header .usp {
+      height: 40vh; }
+      header .usp h1 {
+        font-size: 2.5rem; }
+      header .usp p {
+        font-size: 1rem; }
+
+  .reviews {
+    padding: 40px 0; }
+    .reviews .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column; }
+      .reviews .container div {
+        flex: 0 0 100%;
+        margin-bottom: 40px; }
+        .reviews .container div h2 {
+          font-size: 1.6rem; }
+
+  .news {
+    padding: 40px 0; }
+    .news .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-direction: column; }
+      .news .container article {
+        flex: 0 0 100%; }
+        .news .container article h2 {
+          font-size: 2rem;
+          text-align: center; }
+        .news .container article .post {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: column;
+          margin-bottom: 40px; }
+          .news .container article .post .featuredImage {
+            flex: 0 0 100%; }
+            .news .container article .post .featuredImage img {
+              width: 100%; }
+          .news .container article .post .text {
+            flex: 0 0 100%; }
+            .news .container article .post .text h3 {
+              font-size: 1.5rem; }
+      .news .container aside {
+        flex: 0 0 100%; }
+        .news .container aside .widget {
+          padding: 20px; }
+          .news .container aside .widget h3 {
+            font-size: 1.5rem;
+            margin-bottom: 30px; }
+          .news .container aside .widget div {
+            padding: 20px;
+            text-align: center; }
+            .news .container aside .widget div img {
+              width: 100%; }
+            .news .container aside .widget div h2 {
+              font-size: 2rem;
+              text-shadow: 0 0 5px #b41aab;
+              color: #081624; }
+            .news .container aside .widget div button {
+              padding: 15px 30px;
+              background: #fff;
+              color: #501755;
+              box-shadow: 10px 10px #b41aab;
+              border: none;
+              text-transform: uppercase;
+              font-size: .8rem;
+              font-style: italic;
+              margin-top: 30px;
+              transition: 0.4s ease; }
+              .news .container aside .widget div button:hover {
+                cursor: pointer;
+                box-shadow: 10px 10px #0c062e; }
+
+  .subscribe {
+    padding: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .subscribe h2 {
+      font-size: 2rem; }
+    .subscribe input[type="email"] {
+      font-size: 1rem;
+      width: 250px; } }
 
 /*# sourceMappingURL=main.css.map */

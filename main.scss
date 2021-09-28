@@ -128,6 +128,12 @@ header {
         text-align: right;
         padding: 20px 0;
     }
+    .fa-bars {
+        display: none;
+    }
+    .fa-times {
+        display: none;
+    }
     nav {
         background: $black;
         @include flex(space-between,center,row);
@@ -300,5 +306,152 @@ footer {
     p {
         @extend .bars;
         margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    header {
+        height: 90vh;
+        .topBar {
+            text-align: center;
+        }
+        nav {
+            background: rgba($black,.8);
+            @include flex(center,center,column);
+            padding: 40px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            ul {
+                display: none;
+            }
+            .fa-bars {
+                display: block;
+                color: $lightGray;
+                font-size: 2rem;
+                margin-top: 20px;
+                &:hover {
+                    color: $accents;
+                }
+            }
+            .fa-times {
+                display: none;
+                font-size: 2rem;
+                color: $lightGray;
+                position: absolute;
+                top: 100px;
+                right: 40px;
+                z-index: 999;
+                &:hover {
+                    color: $accents;
+                }
+    
+            }
+        }
+        nav .openNav {
+            @include flex(center,center,column);
+            margin: 0;
+            padding: 0;
+            ul {
+                display: block;
+                @include flex(center,center,column);
+                margin: 0;
+            }
+            .fa-times {
+                display: block;
+            }
+        }
+        nav .closeNav {
+            @include flex(center,flex-end,column );
+        }
+        .usp {
+            height: 40vh;
+            h1 {
+                font-size: 2.5rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        } 
+    } 
+    .reviews {
+        padding: 40px 0;
+        .container {
+            @include flex(space-between,center ,column );
+            div {
+                flex: 0 0 100%;
+                margin-bottom: 40px;
+                h2 {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+    .news {
+        padding: 40px 0;
+        .container {
+            @include flex(space-between,flex-start,column);
+            article {
+                flex: 0 0 100%;
+                h2 {
+                    font-size: 2rem;
+                    text-align: center;
+                }
+                .post {
+                    @include flex(space-between,center ,column);
+                    margin-bottom: 40px;
+                    .featuredImage {
+                        flex: 0 0 100%;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    .text {
+                        flex: 0 0 100%;
+                        h3 {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+            aside {
+                flex: 0 0 100%;
+                .widget {
+                    padding: 20px;
+                    h3 {
+                        font-size: 1.5rem;
+                        margin-bottom: 30px;
+                    }
+                    div {
+                        padding: 20px;
+                        text-align: center;
+                        img {
+                            width: 100%;
+                        }
+                        h2 {
+                            font-size: 2rem;
+                            text-shadow: 0 0 5px $accents;
+                            color: $black;
+                        }
+                        button {
+                            @include btn;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .subscribe {
+        padding: 40px 0;
+        @include flex(center,center ,column);
+        h2 {
+            font-size: 2rem;
+        }
+        input[type="email"] {
+            font-size: 1rem;
+            width: 250px;
+        }
     }
 }
